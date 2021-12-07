@@ -21,7 +21,7 @@
 * 🧵 CSS
 * 🧶 Nuxt.js
 
-## 🎬 Installatie
+## 🎬 Installatie & 🔋 Gebruik
 
 ```bash
 # install dependencies
@@ -40,9 +40,9 @@ $ npm run generate
 
 Voor een meer gedetaileerde uitleg [documentatie](https://nuxtjs.org).
 
-## 🔋 Gebruik
-
 ## 📺 Bronnen
+[Codeguide.co](https://codeguide.co/)  
+[Prototype](https://share.proto.io/IBOSWS/)
 
 ## 🚖 Licentie
 
