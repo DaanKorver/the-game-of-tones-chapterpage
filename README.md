@@ -12,6 +12,7 @@
 
 ## 💾 Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
+Dit is de repository van The Game of Tones Web App, waarbij de navigation flow wordt gemaakt in Nuxtjs.
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
@@ -19,6 +20,7 @@
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 * 🔖 HTML
 * 🧵 CSS
+* 🕹 JavaScript
 * 🧶 Nuxt.js
 
 ## 🎬 Installatie & 🔋 Gebruik
