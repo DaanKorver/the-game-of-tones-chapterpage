@@ -20,6 +20,7 @@ Dit is de repository van The Game of Tones Web App, waarbij de navigation flow w
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 * 🔖 HTML
 * 🧵 CSS
+* 🕹 JavaScript
 * 🧶 Nuxt.js
 
 ## 🎬 Installatie & 🔋 Gebruik
