@@ -1,5 +1,13 @@
 :root {
     --color-purple: #8C73B1;
+    --blue: #3F51B5;
+    --green: #54BA54;
+    --yellow: #E7EF37;
+    --orange: #F6F7F9;
+    --light-blue: #CDD5E9;
+    --light-green: #C8E8C7;
+    --light-yellow: #F4F4D7;
+    --light-orange: #f9DDB3;
 }
 
 * {
