@@ -9,23 +9,25 @@
         <ul class="carousel-track">
           <li class="carousel-slide">
             <p>
-              Acquire the tolls to discover <br />
-              and express your own musical Style
+              <span> Acquire </span> the <span> tools </span> to
+              <span> discover </span> <br />
+              and <span>express </span> your <span>own musical Style</span>
             </p>
             <NuxtLink to="login" class="cta-purple">SKIP</NuxtLink>
           </li>
           <li class="carousel-slide">
             <p>
-              Develop a dynamic perspective by <br />
-              connecting concious connections between <br />
-              theory and practice
+              <span> Develop </span> a <span> dynamic perspective </span> by
+              <br />
+              connecting <span>concious connections</span> between <br />
+              <span>theory and practice</span>
             </p>
             <NuxtLink to="login" class="cta-purple">SKIP</NuxtLink>
           </li>
           <li class="carousel-slide">
             <p>
-              Broaden your musical knowledge <br />
-              through a comprehensive approuch
+              <span> Broaden</span> your <span>musical knowledge</span> <br />
+              through a <span>comprehensive approach</span>
             </p>
             <NuxtLink to="login" class="cta-purple">GET STARTED</NuxtLink>
           </li>
@@ -40,7 +42,11 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  methods: {
+
+  }
+};
 </script>
 <style scoped>
 section {
@@ -101,6 +107,10 @@ li {
   /* Visual */
   /* Misc */
   transform: translateY(-50%);
+}
+
+span {
+  font-weight: 700;
 }
 
 nav {
