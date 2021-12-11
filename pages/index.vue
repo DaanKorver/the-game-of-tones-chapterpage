@@ -1,61 +1,80 @@
 <template>
   <div>
     <section>
+      <img src="~assets/music-note.svg" alt="music note">
       <h1>The Game of Tones</h1>
       <p>Creative Music Making</p>
     </section>
-    <section class="carousel">
-      <div class="carousel-track-container">
-        <ul class="carousel-track">
-          <li class="carousel-slide">
-            <p>
-              <span> Acquire </span> the <span> tools </span> to
-              <span> discover </span> <br />
-              and <span>express </span> your <span>own musical Style</span>
-            </p>
-            <NuxtLink to="login" class="cta-purple">SKIP</NuxtLink>
-          </li>
-          <li class="carousel-slide">
-            <p>
-              <span> Develop </span> a <span> dynamic perspective </span> by
-              <br />
-              connecting <span>concious connections</span> between <br />
-              <span>theory and practice</span>
-            </p>
-            <NuxtLink to="login" class="cta-purple">SKIP</NuxtLink>
-          </li>
-          <li class="carousel-slide">
-            <p>
-              <span> Broaden</span> your <span>musical knowledge</span> <br />
-              through a <span>comprehensive approach</span>
-            </p>
-            <NuxtLink to="login" class="cta-purple">GET STARTED</NuxtLink>
-          </li>
-        </ul>
-      </div>
-      <nav class="carousel-nav">
-        <button class="carousel-indicator"></button>
-        <button class="carousel-indicator"></button>
-        <button class="carousel-indicator"></button>
-      </nav>
-    </section>
+    <div class="carousel-container">
+      <VueSlickCarousel :arrows="false" :dots="true">
+        <section>
+          <h2>
+            Acquire <span>the</span> tools <span>to</span> discover <br />
+            <span>and</span> express <span> your</span> own musical style
+          </h2>
+          <NuxtLink to="Login" class="cta-purple">SKIP</NuxtLink>
+        </section>
+        <section>
+          <h2>
+            Develop <span>a</span> dynamic perspective
+            <span>by <br />connecting</span>concious connections
+            <span>between</span><br />
+            theory <span> and</span> practice
+          </h2>
+          <NuxtLink to="Login" class="cta-purple">SKIP</NuxtLink>
+        </section>
+        <section>
+          <h2>
+            Broaden <span>your</span> musical knowledge <br />
+            <span>through a</span>comprehensive approach
+          </h2>
+          <NuxtLink to="Login" class="cta-purple">GET STARTED</NuxtLink>
+          <p>Already have an account?</p>
+          <NuxtLink to="Login">Sign in</NuxtLink>
+        </section>
+      </VueSlickCarousel>
+    </div>
   </div>
 </template>
 <script>
+import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+// optional style for arrows & dots
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
-  methods: {
-
-  }
+  name: "MyComponent",
+  components: { VueSlickCarousel },
+  data() {
+    return {
+      settings: {
+        arrows: false,
+      },
+    };
+  },
 };
 </script>
 <style scoped>
 section {
   text-align: center;
 }
+
+img {
+  padding-top: 5em;
+  animation: 1s glide infinite alternate-reverse ease;
+}
+
+@keyframes glide {
+  from {
+    transform: translateY(0%)
+  }
+  to {
+    transform: translateY(5%)
+  }
+}
+
 section:first-child > h1 {
   /* Positioning */
   /* Box-model */
-  padding-top: 5em;
   /* Typography */
   font-weight: 400;
   font-size: 2.5rem;
@@ -67,78 +86,40 @@ section:first-child > p {
   font-size: 1.5rem;
 }
 
-section:nth-child(2) {
-  position: relative;
-  height: 30em;
-  width: 100%;
+.carousel-container section {
+  /* Positioning */
+  /* Box-model */
+  height: 20em;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+}
+
+.carousel-container section > a {
+  /* Positioning */
+  /* Box-model */
+  align-self: flex-start;
   margin: 0 auto;
-}
-
-.carousel-track-container {
-  /* Positioning */
-  position: relative;
-  /* Box-model */
-  height: 100%;
   /* Typography */
   /* Visual */
   /* Misc */
 }
 
-ul {
+h2 {
   /* Positioning */
   /* Box-model */
-  padding: 0;
-  margin: 0;
+  margin-bottom: 0.5em;
   /* Typography */
-  /* Visual */
-  list-style: none;
-  /* Misc */
-}
-
-li {
-  /* Positioning */
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  /* Box-model */
-  width: 100%;
-  /* Typography */
-  font-size: 2.5em;
+  font-size: 2.5rem;
   /* Visual */
   /* Misc */
-  transform: translateY(-50%);
 }
 
 span {
-  font-weight: 700;
+  font-weight: 400;
 }
-
-nav {
-  /* Positioning */
-  /* Box-model */
-  display: flex;
-  justify-content: center;
-  padding: 1em 0;
-  /* Typography */
-  /* Visual */
-  /* Misc */
-}
-
-button {
-  /* Positioning */
-  /* Box-model */
-  width: 1em;
-  height: 1em;
-  margin: 0 0.5em;
-  /* Typography */
-  /* Visual */
-  border: 0;
-  border-radius: 50%;
-  /* Misc */
-  cursor: pointer;
-}
-
-/* .carousel-indicator.current-slide {
-  background: black;
-} */
 </style>
