@@ -1,12 +1,12 @@
 <template>
   <div>
     <section>
-      <img src="~assets/music-note.svg" alt="music note">
+      <img src="~assets/music-note.svg" alt="music note" />
       <h1>The Game of Tones</h1>
       <p>Creative Music Making</p>
     </section>
     <div class="carousel-container">
-      <VueSlickCarousel :arrows="false" :dots="true">
+      <VueSlickCarousel v-bind="settings">
         <section>
           <h2>
             Acquire <span>the</span> tools <span>to</span> discover <br />
@@ -47,6 +47,9 @@ export default {
   data() {
     return {
       settings: {
+        dots: true,
+        autoplay: false,
+        autoplayspeed: 3000,
         arrows: false,
       },
     };
@@ -65,10 +68,10 @@ img {
 
 @keyframes glide {
   from {
-    transform: translateY(0%)
+    transform: translateY(0%);
   }
   to {
-    transform: translateY(5%)
+    transform: translateY(5%);
   }
 }
 
@@ -121,5 +124,10 @@ h2 {
 
 span {
   font-weight: 400;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: black;
 }
 </style>
