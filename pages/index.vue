@@ -47,7 +47,7 @@ export default {
     return {
       settings: {
         dots: true,
-        autoplay: false,
+        autoplay: true,
         autoplayspeed: 3000,
         arrows: false,
       },
