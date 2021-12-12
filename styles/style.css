@@ -3,14 +3,16 @@
   --blue: #3f51b5;
   --green: #54ba54;
   --yellow: #e7ef37;
-  --orange: #f6f7f9;
+  --orange: #ff9400;
   --white: #fff;
   --light-blue: #cdd5e9;
   --light-blue-transparent: rgba(205, 213, 233, .68);
   --light-green: #c8e8c7;
   --light-green-transparent: rgba(200, 232, 199, .68);
   --light-yellow: #f4f4d7;
+  --light-yellow-transparent: rgba(244, 244, 215, 0.68);
   --light-orange: #f9ddb3;
+  --light-orange-transparent: rgba(249, 221, 179, 0.68);
   --caroucel-blue: #0076ff;
   --text-color: #52575e;
 }

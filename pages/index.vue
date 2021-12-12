@@ -7,14 +7,14 @@
     </section>
     <div class="carousel-container">
       <VueSlickCarousel v-bind="settings">
-        <section>
+        <section class="light-blue">
           <h2>
             Acquire <span>the</span> tools <span>to</span> discover <br />
             <span>and</span> express <span> your</span> own musical style
           </h2>
           <NuxtLink to="Login" class="cta-purple">SKIP</NuxtLink>
         </section>
-        <section>
+        <section class="light-green">
           <h2>
             Develop <span>a</span> dynamic perspective
             <span>by <br />connecting</span>concious connections
@@ -23,7 +23,7 @@
           </h2>
           <NuxtLink to="Login" class="cta-purple">SKIP</NuxtLink>
         </section>
-        <section>
+        <section class="light-yellow">
           <h2>
             Broaden <span>your</span> musical knowledge <br />
             <span>through a</span>comprehensive approach
@@ -113,12 +113,16 @@ section:last-child > p {
   /* Misc */
 }
 
-.carousel-container section:first-child {
+.light-blue {
   background-color: var(--light-blue-transparent);
 }
 
-.carousel-container section:nth-child(2) {
+.light-green {
   background-color: var(--light-green-transparent);
+}
+
+.light-yellow {
+  background-color: var(--light-yellow-transparent);
 }
 
 .carousel-container section > a {
