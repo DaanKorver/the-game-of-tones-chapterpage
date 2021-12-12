@@ -21,7 +21,7 @@
 <script></script>
 <style scoped>
 div:first-child {
-  background-color: var(--light-blue-transparent);
+  background-color: var(--white-transparent);
 }
 
 form {
@@ -41,12 +41,17 @@ legend {
   /* Box-model */
   margin-bottom: 3em;
 }
+
+legend:first-child {
+    margin-top: 10em;
+}
+
 input {
   /* Positioning */
   /* Box-model */
   display: block;
   padding: 0.6em 0.6em 0.6em 0.3em;
-  width: 18em;
+  width: 24em;
   /* Typography */
   font-size: 1.5rem;
   /* Visual */
@@ -87,7 +92,6 @@ input:valid ~ label {
   /* Typography */
   font-size: 1rem;
   /* Visual */
-  color: var(--blue);
   /* Misc */
 }
 
@@ -107,7 +111,7 @@ span:nth-child(2):after {
   width: 0;
   /* Typography */
   /* Visual */
-  background: var(--blue);
+  background: var(--color-purple);
   /* Misc */
   content: "";
   transition: 0.2s ease all;

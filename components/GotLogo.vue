@@ -27,7 +27,7 @@ img {
 
 .text-container {
   position: absolute;
-  top: 2em;
+  top: 5em;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;

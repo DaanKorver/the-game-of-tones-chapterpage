@@ -5,6 +5,7 @@
   --yellow: #e7ef37;
   --orange: #ff9400;
   --white: #fff;
+  --white-transparent: rgba(255, 255, 255, 0.68);
   --light-blue: #cdd5e9;
   --light-blue-transparent: rgba(205, 213, 233, .68);
   --light-green: #c8e8c7;
