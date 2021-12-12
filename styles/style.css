@@ -74,6 +74,7 @@ body {
 .slick-dots {
   /* Positioning */
   position: absolute;
+  top: 41em;
   /* Box-model */
   display: block;
   width: 100%;
@@ -132,7 +133,6 @@ body {
 .slick-dots li button:before {
   /* Positioning */
   position: absolute;
-  bottom: -10em;
   /* Box-model */
   width: 1em;
   height: 1em;
