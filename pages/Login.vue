@@ -131,6 +131,7 @@ input:focus ~ span:nth-child(2):after {
 }
 
 input[type="text"] {
+  font-family: "Poppins", sans-serif;
   color: var(--color-purple);
   background: transparent !important;
 }
