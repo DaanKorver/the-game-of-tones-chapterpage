@@ -1,0 +1,54 @@
+<template>
+  <nav>
+    <MainMenu/>
+    <section class="circle gradient">
+      <h1>VOLUME 1</h1>
+      <p>Making Melodies</p>
+      <p>The Game of Tones</p>
+    </section>
+    <ul>
+      <li class="hue"><span>Intro</span></li>
+      <li class="locked"><span>1</span></li>
+      <li class="locked"><span>2</span></li>
+      <li class="locked"><span>3</span></li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+import "~/styles/circle.css"
+export default {
+  
+}
+</script>
+
+<style scoped>
+nav {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 7vh;
+  color: var(--dark-blue);
+}
+
+h1, p:first-of-type {
+  font-size: 2em;
+}
+
+p:first-of-type {
+  margin-bottom: 2em;
+}
+
+.gradient {
+  background: linear-gradient(135deg,var(--light-blue) 40%, var(--blue));
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translate(0, 0);}
+  50% { transform: translate(0, 3%)}
+  100% { transform: translate(0, 0);}
+}
+</style>
