@@ -45,7 +45,7 @@ export default {
       settings: {
         dots: true,
         autoplay: true,
-        autoplayspeed: 3000,
+        autoplaySpeed: 5000,
         arrows: false,
       },
     };
