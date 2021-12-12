@@ -13,7 +13,7 @@
         <span class="bar"></span>
         <label>Password:</label>
         <p>Forgot password or username?</p>
-        <NuxtLink to="Home" class="cta-purple">SIGN IN</NuxtLink>
+        <NuxtLink to="volume/1" class="cta-purple">SIGN IN</NuxtLink>
       </legend>
     </form>
   </div>
