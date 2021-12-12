@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section>
+    <section class="text-container">
       <img src="~assets/music-note.svg" alt="music note" />
       <h1>The Game of Tones</h1>
       <p>Creative Music Making</p>
@@ -40,7 +40,6 @@
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 // optional style for arrows & dots
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
   name: "MyComponent",
   components: { VueSlickCarousel },
@@ -62,8 +61,7 @@ section {
 }
 
 img {
-  padding-top: 5em;
-  animation: 1s glide infinite alternate-reverse ease;
+  animation: 1s glide infinite alternate-reverse ease-in-out;
 }
 
 @keyframes glide {
@@ -71,8 +69,16 @@ img {
     transform: translateY(0%);
   }
   to {
-    transform: translateY(5%);
+    transform: translateY(10%);
   }
+}
+
+.text-container {
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
 }
 
 section:first-child > h1 {
@@ -86,13 +92,18 @@ section:first-child > h1 {
 }
 
 section:first-child > p {
-  font-size: 1.5rem;
+  font-size: 1rem;
+}
+
+section:last-child > p {
+  margin-top: 1.5em;
 }
 
 .carousel-container section {
   /* Positioning */
   /* Box-model */
-  height: 20em;
+  width: 100vw;
+  height: 100vh;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
@@ -100,6 +111,14 @@ section:first-child > p {
   /* Typography */
   /* Visual */
   /* Misc */
+}
+
+.carousel-container section:first-child {
+  background-color: var(--light-blue-transparent);
+}
+
+.carousel-container section:nth-child(2) {
+  background-color: var(--light-green-transparent);
 }
 
 .carousel-container section > a {
@@ -119,6 +138,7 @@ h2 {
   /* Typography */
   font-size: 2.5rem;
   /* Visual */
+  color: var(--text-color);
   /* Misc */
 }
 
@@ -126,8 +146,15 @@ span {
   font-weight: 400;
 }
 
-.slick-dots li.slick-active button:before {
-    opacity: 0.75;
-    color: black;
+.slick-dots li.slick-active {
+  opacity: 0.75;
+}
+
+.slick-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 </style>
