@@ -1,10 +1,6 @@
 <template>
   <div>
-    <section class="text-container">
-      <img src="~assets/music-note.svg" alt="music note" />
-      <h1>The Game of Tones</h1>
-      <p>Creative Music Making</p>
-    </section>
+    <GotLogo></GotLogo>
     <div class="carousel-container">
       <VueSlickCarousel v-bind="settings">
         <section class="light-blue">
@@ -39,10 +35,11 @@
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import GotLogo from "../components/GotLogo.vue";
 // optional style for arrows & dots
 export default {
   name: "MyComponent",
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, GotLogo },
   data() {
     return {
       settings: {
@@ -58,41 +55,6 @@ export default {
 <style scoped>
 section {
   text-align: center;
-}
-
-img {
-  animation: 1s glide infinite alternate-reverse ease-in-out;
-}
-
-@keyframes glide {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(10%);
-  }
-}
-
-.text-container {
-  position: absolute;
-  top: 2em;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 99;
-}
-
-section:first-child > h1 {
-  /* Positioning */
-  /* Box-model */
-  /* Typography */
-  font-weight: 400;
-  font-size: 2.5rem;
-  /* Visual */
-  /* Misc */
-}
-
-section:first-child > p {
-  font-size: 1rem;
 }
 
 section:last-child > p {
