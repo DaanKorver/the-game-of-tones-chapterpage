@@ -1,0 +1,158 @@
+:root {
+  --color-purple: #8c73b1;
+  --blue: #3f51b5;
+  --green: #54ba54;
+  --yellow: #e7ef37;
+  --orange: #ff9400;
+  --white: #fff;
+  --light-blue: #cdd5e9;
+  --light-blue-transparent: rgba(205, 213, 233, .68);
+  --light-green: #c8e8c7;
+  --light-green-transparent: rgba(200, 232, 199, .68);
+  --light-yellow: #f4f4d7;
+  --light-yellow-transparent: rgba(244, 244, 215, 0.68);
+  --light-orange: #f9ddb3;
+  --light-orange-transparent: rgba(249, 221, 179, 0.68);
+  --caroucel-blue: #0076ff;
+  --text-color: #52575e;
+}
+
+* {
+  /* Box-model */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* Positioning */
+
+  /* Box-model */
+  height: 100vh;
+  width: 100vw;
+
+  /* Typography */
+  font-family: "Poppins", sans-serif;
+
+  /* Visual */
+  background-image: url("../assets/background-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Misc */
+}
+
+.cta-purple {
+  /* Positioning */
+  /* Box-model */
+  padding: 0.3em 1em;
+  /* Typography */
+  font-size: 1.5rem;
+  text-decoration: none;
+  /* Visual */
+  color: var(--white);
+  background-color: var(--color-purple);
+  border-radius: 1em;
+  /* Misc */
+}
+
+/* CAROUSEL */
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAATsAA0AAAAAB2wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAE0AAAABoAAAAcdIcYB0dERUYAAAS0AAAAHAAAAB4AJwANT1MvMgAAAZwAAABRAAAAYFAQ/45jbWFwAAACAAAAAFcAAAFiIhFFt2dhc3AAAASsAAAACAAAAAj//wADZ2x5ZgAAAmgAAAE1AAACLD+btmBoZWFkAAABMAAAAC8AAAA2AAEx+2hoZWEAAAFgAAAAHAAAACQD5QIFaG10eAAAAfAAAAAQAAAAFgZKAEpsb2NhAAACWAAAABAAAAAQATYBoG1heHAAAAF8AAAAHQAAACAASwBHbmFtZQAAA6AAAADcAAABbgUngcJwb3N0AAAEfAAAAC4AAABFOXjBpHjaY2BkYGAA4vMGfuHx/DZfGbiZGEDgfGFFPZxWZVBlvM14G8jlYABLAwAT1QnNAHjaY2BkYGC8zcDAoMfEAAJANiMDKmABADBkAe942mNgZGBgYGdwYWBiAAEQycgAEnMA8xkACcgAkwAAAHjaY2BmYmCcwMDKwMDow5jGwMDgDqW/MkgytDAwMDGwcjKAQQNQCZBSYICCgDTXFAYHhkTFSYwP/j9g0GO8/f82A0QNA+NtsBIFBkYANHMN4wAAAHjaY2KAACYIVoVAAALCAJt42mNgYGBmgGAZBkYGEIgB8hjBfBYGByDNw8DBwARkMzAkKigpTlCc9P8/WB0S7/+i+4/uld4rgZoAB4xsDHAhRiYgwcSApoCBcsBMBTNYGGgGAEdEDyUAAAAAAAAAAAAAZgCKANABFnjadZBdToNAEMd3CrtAl5TQLtS0LCoN0A8SGkBI+mAfPET75B1896HppfQcvnII4w3cLYpW6k4ymdn9z8xvBwEKUQg11OgBIXAYWUEQR1uIZoFGpLGxKy3PqrIq8+waXIfJ+5mQSSvkvXwRqqocu1D39QMl2JgvN9zzhsyk1GRDz+OBfzMioCqx0rtdLYo0SiZTZttsOkmidBkveKibFF4Oep9SI46bqk3Twhp4iihUemrMWFPy2NRbthfqKkHi/PxlJLITZdAiSj6ouZ+tn9eZz78DuD9LZYB6bZ8rlCAUVuVdkULjxV4sIEysIc/KSyPmnJDdjhCOdQ0fCTliTX/tjH3ysWao+71qaNjHQjcQwrcuyl+WLZQthCMotJP/h+Xjazz+hfTeRWmG4zOiSyif/q1OtAAAAHjabY49asNAEIU/2ZJDfkiRIvXapUFCEqpcptABUrg3ZhEiQoKVfY9UqVLlGDlADpAT5e16IUWysMz3hjfzBrjjjQT/EjKpCy+4YhN5yZoxcirPe+SMWz4jr6S+5UzSa3VuwpTnBfc8RF7yxDZyKs9r5IxHPiKv1P9iZqDnyAvMQ39UecbScVb/gJO03Xk4CFom3XYK1clhMdQUlKo7/d9NF13RkIdfy+MV7TSe2sl11tRFaXYmJKpWTd7kdVnJ8veevZKc+n3I93t9Jnvr5n4aTVWU/0z9AI2qMkV42mNgYkAGjAzogB0sysTgwtDOyMTIzJlYVJRfnpOaVsIFZhVlpmeUAABuKQkSAAAAAAAB//8AAnjaY2BkYGDgAWIxIGZiYARCNiBmAfMYAAPgADV42mNgYGBkAIKrS9Q5QPT5wop6GA0APf8GGAAA)
+    format("woff");
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 2rem;
+}
+
+.slick-dots {
+  /* Positioning */
+  position: absolute;
+  /* Box-model */
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /* Typography */
+  text-align: center;
+  /* Visual */
+  list-style: none;
+  /* Misc */
+}
+
+.slick-dots li {
+  /* Positioning */
+  position: relative;
+  /* Box-model */
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 0.3em;
+  padding: 0;
+  /* Typography */
+  /* Visual */
+  /* Misc */
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  /* Positioning */
+  /* Box-model */
+  display: block;
+  width: 1em;
+  height: 1em;
+  padding: 0.3em;
+  /* Typography */
+  font-size: 0;
+  line-height: 0;
+
+  /* Visual */
+  background: transparent;
+  color: transparent;
+  border: 0;
+  outline: none;
+  /* Misc */
+  cursor: pointer;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  /* Positioning */
+  position: absolute;
+  bottom: -10em;
+  /* Box-model */
+  width: 1em;
+  height: 1em;
+
+  /* Typography */
+  font-family: "slick";
+  font-size: 1rem;
+  line-height: 0.5em;
+  text-align: center;
+  /* Visual */
+  color: var(--white);
+  /* Misc */
+  content: "•";
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  /* Visual */
+  color: var(--caroucel-blue);
+  /* Misc */
+  opacity: 0.75;
+}
