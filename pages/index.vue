@@ -1,5 +1,6 @@
 <template>
   <div>
+    <MainMenu/>
     <section class="text-container">
       <img src="~assets/music-note.svg" alt="music note" />
       <h1>The Game of Tones</h1>
@@ -48,7 +49,7 @@ export default {
       settings: {
         dots: true,
         autoplay: true,
-        autoplayspeed: 3000,
+        autoplaySpeed: 5000,
         arrows: false,
       },
     };
