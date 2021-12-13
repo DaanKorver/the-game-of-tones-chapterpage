@@ -8,7 +8,7 @@
             Acquire <span>the</span> tools <span>to</span> discover <br />
             <span>and</span> express <span> your</span> own musical style
           </h2>
-          <NuxtLink to="Login" class="cta-purple">SKIP</NuxtLink>
+          <NuxtLink to="login" class="cta-purple">SKIP</NuxtLink>
         </section>
         <section class="light-green">
           <h2>
@@ -17,16 +17,16 @@
             <span>between</span><br />
             theory <span> and</span> practice
           </h2>
-          <NuxtLink to="Login" class="cta-purple">SKIP</NuxtLink>
+          <NuxtLink to="login" class="cta-purple">SKIP</NuxtLink>
         </section>
         <section class="light-yellow">
           <h2>
             Broaden <span>your</span> musical knowledge <br />
             <span>through a</span>comprehensive approach
           </h2>
-          <NuxtLink to="Login" class="cta-purple">GET STARTED</NuxtLink>
+          <NuxtLink to="login" class="cta-purple">GET STARTED</NuxtLink>
           <p>Already have an account?</p>
-          <NuxtLink to="Login">Sign in</NuxtLink>
+          <NuxtLink to="login">Sign in</NuxtLink>
         </section>
       </VueSlickCarousel>
     </div>

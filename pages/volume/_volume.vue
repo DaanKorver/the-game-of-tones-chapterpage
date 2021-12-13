@@ -6,10 +6,10 @@
       <p>The Game of Tones</p>
     </section>
     <ul>
-      <li class="hue"><span>Intro</span></li>
-      <li class="locked"><span>1</span></li>
-      <li class="locked"><span>2</span></li>
-      <li class="locked"><span>3</span></li>
+      <li class="hue"><NuxtLink to="/chapter"><span>Intro</span></NuxtLink></li>
+      <li class="locked"><NuxtLink to=""><span>1</span></NuxtLink></li>
+      <li class="locked"><NuxtLink to=""><span>2</span></NuxtLink></li>
+      <li class="locked"><NuxtLink to=""><span>3</span></NuxtLink></li>
     </ul>
   </nav>
 </template>

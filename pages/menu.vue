@@ -1,6 +1,6 @@
 <template>
-  <nav v-bind:class="{'open': isOpen}">
-    <button>Close</button>
+  <nav>
+    <a @click="$router.go(-1)" class="close">Close</a>
     <div class="circle hue">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 285.05 285.05">
   <defs>
@@ -376,18 +376,26 @@ nav {
   /* Typography */
   text-align: center;
   /* Visual */
-  transform: scale(1);
-  visibility: hidden;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(.7);
+  transform: translate(-50%, -50%);
   /* Misc */
-  transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-nav.open {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+.circle {
+  opacity: 0;
+  animation: appear .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards .2s;
+}
+
+@keyframes appear {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(.7);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 p {
@@ -395,7 +403,7 @@ p {
   color: var(--white);
 }
 
-button {
+.close {
   /* Positioning */
   position: fixed;
   left: 2em;
@@ -410,10 +418,12 @@ button {
   border: transparent;
   outline: transparent;
   color: var(--white);
+  text-decoration: none;
   /* Misc */
+  cursor: pointer;
 }
 
-button::before {
+.close::before {
   /* Positioning */
   position: absolute;
   left: -1.5em;

@@ -114,10 +114,29 @@ ul > li {
   background-color: lightgray;
   color: var(--dark-blue);
   /* Misc */
+  pointer-events: none;
 }
 
 ul > li span {
   z-index: 5;
+}
+
+ul > li a {
+  /* Positioning */
+  /* Box-model */
+  width: 4.5em;
+  height: 4.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Typography */
+  /* Visual */
+  color: inherit;
+  /* Misc */
+  border-radius: 50%;
+  text-decoration: none;
+  pointer-events: all;
+  flex-shrink: 0;
 }
 
 ul > li:not(:last-child) span::after {
@@ -142,7 +161,12 @@ ul > li.locked {
 }
 
 ul > li.locked {
-  opacity: .68;
+  opacity: 0.68;
+}
+
+ul > li.locked a {
+  pointer-events: none;
+  cursor: default;
 }
 
 ul > li:last-child {
