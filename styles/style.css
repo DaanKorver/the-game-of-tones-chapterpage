@@ -158,3 +158,14 @@ body {
   /* Misc */
   opacity: 0.75;
 }
+
+
+/* Page Transitions */
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
+}
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
+}

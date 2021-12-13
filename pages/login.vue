@@ -18,7 +18,14 @@
     </form>
   </div>
 </template>
-<script></script>
+<script>
+export default {
+  transition: {
+    name: "layout",
+    mode: "out-in",
+  },
+};
+</script>
 <style scoped>
 div:first-child {
   background-color: var(--white-transparent);
@@ -43,7 +50,7 @@ legend {
 }
 
 legend:first-child {
-    margin-top: 10em;
+  margin-top: 10em;
 }
 
 input {
@@ -145,5 +152,8 @@ p {
   margin-bottom: 3em;
 }
 
-a,p {align-self: flex-start}
+a,
+p {
+  align-self: flex-start;
+}
 </style>

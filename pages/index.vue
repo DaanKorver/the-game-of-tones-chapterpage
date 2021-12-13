@@ -50,6 +50,10 @@ export default {
       },
     };
   },
+  transition: {
+    name: "layout",
+    mode: "out-in",
+  },
 };
 </script>
 <style scoped>
