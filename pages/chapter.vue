@@ -15,7 +15,14 @@
     </div>
   </section>
 </template>
-<script></script>
+<script>
+export default {
+  transition: {
+    name: "layout",
+    mode: "out-in",
+  },
+};
+</script>
 <style scoped>
 section {
   /* Positioning */
