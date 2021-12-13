@@ -1,6 +1,5 @@
 <template>
   <nav>
-    <MainMenu/>
     <section class="circle gradient">
       <h1>VOLUME 1</h1>
       <p>Making Melodies</p>
@@ -16,12 +15,12 @@
 </template>
 
 <script>
-import "~/styles/circle.css"
 export default {
   
 }
 </script>
 
+<style scoped src="~/styles/circle.css"></style>
 <style scoped>
 nav {
   width: 100vw;

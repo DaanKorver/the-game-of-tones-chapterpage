@@ -348,7 +348,6 @@
 </template>
 
 <script>
-import "~/styles/circle.css"
 export default {
   props: {
     isOpen: {
@@ -359,6 +358,7 @@ export default {
 }
 </script>
 
+<style scoped src="~/styles/circle.css"></style>
 <style scoped>
 nav {
   /* Positioning */
