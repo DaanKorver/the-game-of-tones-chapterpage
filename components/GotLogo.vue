@@ -1,6 +1,6 @@
 <template>
   <section class="text-container">
-    <img src="~assets/music-note.svg" alt="music note" />
+    <img src="~assets/music-note-purple.svg" alt="music note" />
     <h1>The Game of Tones</h1>
     <p>Creative Music Making</p>
   </section>
