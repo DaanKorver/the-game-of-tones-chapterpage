@@ -12,9 +12,9 @@
         <input type="password" required />
         <span class="bar"></span>
         <label>Password:</label>
-        <p>Forgot password or username?</p>
-        <NuxtLink to="volume/1" class="cta-purple">SIGN IN</NuxtLink>
       </legend>
+      <p>Forgot password or username?</p>
+      <NuxtLink to="volume/1" class="cta-purple">SIGN IN</NuxtLink>
     </form>
   </div>
 </template>
@@ -27,12 +27,12 @@ div:first-child {
 form {
   /* Box-model */
   height: 100vh;
-  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: max-content;
 }
 
 legend {
@@ -144,4 +144,6 @@ p {
   margin-top: 2em;
   margin-bottom: 3em;
 }
+
+a,p {align-self: flex-start}
 </style>
