@@ -48,6 +48,7 @@ Voor een meer gedetaileerde uitleg [documentatie](https://nuxtjs.org).
 ## 📺 Bronnen
 [Codeguide.co](https://codeguide.co/)  
 [Prototype](https://share.proto.io/IBOSWS/)
+[Tablericons](https://tablericons.com/)
 
 ## 🚖 Licentie
 
