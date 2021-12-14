@@ -17,6 +17,10 @@
   --light-orange-transparent: rgba(249, 221, 179, 0.68);
   --caroucel-blue: #0076ff;
   --text-color: #52575e;
+  --disabled-text: #e2e2e2;
+  --disabled: whitesmoke;
+  --gray: #abafba;
+  --light-gray: lightgray;
 }
 
 * {

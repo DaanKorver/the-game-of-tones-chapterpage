@@ -12,6 +12,7 @@
           libero doloribus.
         </p>
       </main>
+      <OnionNav />
     </div>
   </section>
 </template>

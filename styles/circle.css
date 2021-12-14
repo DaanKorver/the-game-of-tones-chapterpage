@@ -111,7 +111,7 @@ ul > li {
   padding: 2em;
   /* Typography */
   /* Visual */
-  background-color: lightgray;
+  background-color: var(--light-gray);
   color: var(--dark-blue);
   /* Misc */
   pointer-events: none;
