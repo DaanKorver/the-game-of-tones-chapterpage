@@ -1,8 +1,8 @@
 <template>
-  <aside>
+  <aside :class="activeSubject">
     <div>
       <nav>
-        <NuxtLink to="menu">
+        <NuxtLink to="/menu">
           <img src="~assets/menu-button.svg" alt="Menu Button" />
           <p>Menu</p>
         </NuxtLink>
@@ -11,7 +11,17 @@
     </div>
   </aside>
 </template>
-<script></script>
+<script>
+export default {
+  props: ['subject'],
+  computed: {
+    activeSubject: function() {
+      const subjects = ["blue", "green", "yellow", "orange"]
+      return subjects[this.subject - 1]
+    }
+  }
+}
+</script>
 <style scoped>
 aside {
   /* Positioning */
@@ -25,6 +35,23 @@ aside {
   color: var(--white);
   background-color: var(--blue);
   /* Misc */
+}
+
+aside.blue {
+  background-color: var(--blue);
+}
+
+aside.green {
+  background-color: var(--green);
+}
+
+aside.yellow {
+  background-color: var(--yellow);
+  color: var(--text-color);
+}
+
+aside.orange {
+  background-color: var(--orange);
 }
 
 aside > div {
@@ -86,6 +113,6 @@ button {
 
 a {
   text-decoration: none;
-  color: var(--white);
+  color: inherit;
 }
 </style>

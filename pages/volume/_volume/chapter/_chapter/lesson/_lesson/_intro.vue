@@ -4,20 +4,22 @@
       <Sidebar></Sidebar>
       <AppHeader></AppHeader>
       <main>
-        <h2>Introduction Volume 1</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti
-          facilis eum nobis possimus sint, odio ratione odit alias quos nostrum
-          ipsam iusto explicabo beatae cupiditate dolorum. Consequatur commodi
-          libero doloribus.
-        </p>
+        <h2>{{ title }}</h2>
+        <p>{{ body }}</p>
       </main>
-      <OnionNav />
     </div>
   </section>
 </template>
 <script>
+import pages from "~/static/pages.json"
 export default {
+  asyncData ({ params }) {
+    const volumeInfo = pages[params.volume - 1]
+    const chapterInfo = volumeInfo.chapters[params.chapter]
+    const {title, body, lessons} = chapterInfo
+    console.log(params);
+    return {title, body, lessons, active: params.lesson}
+  },
   transition: {
     name: "layout",
     mode: "out-in",

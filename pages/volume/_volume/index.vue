@@ -1,22 +1,24 @@
 <template>
   <nav>
     <section class="circle gradient">
-      <h1>VOLUME 1</h1>
-      <p>Making Melodies</p>
+      <h1>VOLUME {{ volume }}</h1>
+      <p>{{ title }}</p>
       <p>The Game of Tones</p>
     </section>
     <ul>
-      <li class="hue"><NuxtLink to="/chapter"><span>Intro</span></NuxtLink></li>
-      <li class="locked"><NuxtLink to=""><span>1</span></NuxtLink></li>
-      <li class="locked"><NuxtLink to=""><span>2</span></NuxtLink></li>
-      <li class="locked"><NuxtLink to=""><span>3</span></NuxtLink></li>
+      <li v-for="chapter in chapters" :key="chapter.index" :class="chapter.index == 'intro' ? 'hue' : 'locked' "><NuxtLink :to="`${$route.fullPath}/intro`"><span>{{ chapter.index }}</span></NuxtLink></li>
     </ul>
   </nav>
 </template>
 
 <script>
+import pages from "~/static/pages.json"
 export default {
-  
+  asyncData ({ params }) {
+    const volumeInfo = pages[params.volume - 1]
+    const {volume, title, chapters} = volumeInfo
+    return {volume, title, chapters}
+  }
 }
 </script>
 

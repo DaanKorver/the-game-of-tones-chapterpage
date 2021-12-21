@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="activeSubject">
     <figure>
       <img src="~assets/music-note-black.svg" alt="music settings" />
     </figure>
@@ -8,7 +8,17 @@
     </figure>
   </header>
 </template>
-<script></script>
+<script>
+export default {
+  props: ['subject'],
+  computed: {
+    activeSubject: function() {
+      const subjects = ["blue", "green", "yellow", "orange"]
+      return subjects[this.subject - 1]
+    }
+  }
+}
+</script>
 <style scoped>
 header {
   /* Positioning */
@@ -23,6 +33,23 @@ header {
   /* Visual */
   background-color: var(--light-blue);
   /* Misc */
+}
+
+header.blue {
+  background-color: var(--light-blue);
+}
+
+header.green {
+  background-color: var(--light-green);
+}
+
+header.yellow {
+  background-color: var(--light-yellow);
+  color: var(--text-color);
+}
+
+header.orange {
+  background-color: var(--light-orange);
 }
 
 figure {

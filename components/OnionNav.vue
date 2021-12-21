@@ -2,12 +2,14 @@
   <nav>
     <ul>
       <OnionItem
-        v-for="(lesson, index) in lessons"
-        :key="index"
-        :class="lesson.state"
-        :active="lesson.state == 'active'"
+        v-for="lesson in lessons"
+        :key="lesson.index"
+        :index="lesson.index"
+        :class="lesson.index == active ? 'active' :''"
+        :active="lesson.index == active"
+        :subject="subject"
       >
-        {{ lesson.lesson }}
+        {{ lesson.index == 'intro' ? lesson.index : `1.${lesson.index}` }}
       </OnionItem>
     </ul>
   </nav>
@@ -15,17 +17,10 @@
 
 <script>
 export default {
-  data: () => {
-    return {
-      lessons: [
-        { lesson: "Intro", state: "done" },
-        { lesson: "1.1", state: "done" },
-        { lesson: "1.2", state: "active" },
-        { lesson: "1.3", state: "locked" },
-        { lesson: "1.4", state: "locked" },
-      ],
-    };
-  },
+  props: ['lessons','active', 'subject'],
+  mounted: function() {
+    console.log(this.subject);
+  }
 };
 </script>
 
