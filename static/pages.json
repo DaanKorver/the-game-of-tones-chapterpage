@@ -12,24 +12,80 @@
         "index": "1",
         "title": "1",
         "body": "1",
-        "lessons": {
-          "lessonOne": {
+        "lessons": [
+          {
             "index": 1,
-            "title": "Directions I"
+            "subjects": [
+              {            
+              "title": "Directions I",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Directional Tendencies I",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
           },
-          "lessonTwo": {
+          {
             "index": 2,
-            "title": "Directions II"
+            "subjects": [
+              {            
+              "title": "Directions II",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Temporal Tendencies I",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
           },
-          "lessonThree": {
+          {
             "index": 3,
-            "title": "Motion Types"
+            "subjects": [
+              {            
+              "title": "Directions III",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Directional Tendencies II",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
           },
-          "end": {
+          {
             "index": 4,
-            "title": "Motion Types"
+            "subjects": [
+              {            
+              "title": "Putting it together",
+              "body": "The Story so far..."
+              }
+            ]
           }
-        }
+        ]
       },
       {
         "index": "2",

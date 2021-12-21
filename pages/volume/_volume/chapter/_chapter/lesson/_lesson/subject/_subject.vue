@@ -17,7 +17,10 @@ export default {
   asyncData ({ params }) {
     const volumeInfo = pages[params.volume - 1]
     const chapterInfo = volumeInfo.chapters[params.chapter]
-    const {title, body, lessons} = chapterInfo
+    const subject = chapterInfo.lessons[params.lesson - 1].subjects[params.subject - 1]
+    let {title, body} = subject
+    const {lessons} = chapterInfo
+    title = `${params.chapter}.${params.lesson}: ${title}` 
     return {title, body, lessons, active: params.lesson, subject: params.subject}
   },
   computed: {
