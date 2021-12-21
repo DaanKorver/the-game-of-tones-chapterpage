@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/volume/1/chapter/1/lesson/3/subject/1", (function(a,b){return {data:[{title:a,body:a,lessons:{lessonOne:{index:1,title:"Directions I"},lessonTwo:{index:2,title:"Directions II"},lessonThree:{index:3,title:b},end:{index:4,title:b}},active:"3",subject:a}],fetch:{},mutations:void 0}}("1","Motion Types")));
