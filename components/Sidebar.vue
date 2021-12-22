@@ -2,7 +2,7 @@
   <aside :class="activeSubject">
     <div>
       <nav>
-        <NuxtLink to="/menu">
+        <NuxtLink :to="menuLink">
           <img src="~assets/menu-button.svg" alt="Menu Button" />
           <p>Menu</p>
         </NuxtLink>
@@ -18,6 +18,11 @@ export default {
     activeSubject: function() {
       const subjects = ["blue", "green", "yellow", "orange"]
       return subjects[this.subject - 1]
+    },
+    menuLink: function() {
+      const fullPath = this.$route.fullPath.match(/\/volume\/[0-9]{1}/)
+      const newPath = `${fullPath.toString()}/menu`
+      return newPath
     }
   }
 }

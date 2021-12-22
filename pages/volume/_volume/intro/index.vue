@@ -16,14 +16,14 @@ import pages from "~/static/pages.json"
 export default {
   asyncData ({ params }) {
     const volumeInfo = pages[params.volume - 1]
-    const chapterInfo = volumeInfo.chapters[0]
+    const chapterInfo = volumeInfo.intro
     const {title, body, lessons} = chapterInfo
     return {title, body, lessons, active: params.lesson}
   },
   computed: {
     continue: function() {
-      const fullPath = this.$route.fullPath.replace(/\/intro/, "")
-      return `${fullPath}/chapter/1/lesson/1/subject/1`
+      const fullPath = this.$route.fullPath.replace(/\/intro\/?/, "")
+      return `${fullPath}/chapter/1/intro`
     }
   },
   transition: {

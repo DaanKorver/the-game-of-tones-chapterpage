@@ -150,7 +150,7 @@ export default {
     },
     lessonLink: function() {
       const fullPath = this.$route.fullPath
-      const newPath = fullPath.replace(/\/lesson\/[1-4]\/subject\/[1-4]/, `/lesson/${this.index}/subject/1`)
+      const newPath = fullPath.replace(/\/lesson\/[1-4]\/subject\/[1-4]\/?/, `/lesson/${this.index}/subject/1`)
       return newPath
     }
   },

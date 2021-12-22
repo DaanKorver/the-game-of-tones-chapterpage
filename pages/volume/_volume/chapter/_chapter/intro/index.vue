@@ -6,6 +6,7 @@
       <main>
         <h2>{{ title }}</h2>
         <p>{{ body }}</p>
+        <NuxtLink :to="this.continue">Continue</NuxtLink>
       </main>
     </div>
   </section>
@@ -15,9 +16,15 @@ import pages from "~/static/pages.json"
 export default {
   asyncData ({ params }) {
     const volumeInfo = pages[params.volume - 1]
-    const chapterInfo = volumeInfo.chapters[params.chapter]
+    const chapterInfo = volumeInfo.chapters[0]
     const {title, body, lessons} = chapterInfo
-    return {title, body, lessons, active: params.lesson}
+    return {title, body}
+  },
+  computed: {
+    continue: function() {
+      const fullPath = this.$route.fullPath.replace(/\/intro\/?/, "")
+      return `${fullPath}/lesson/1/subject/1`
+    }
   },
   transition: {
     name: "layout",

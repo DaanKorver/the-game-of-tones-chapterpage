@@ -115,6 +115,7 @@ ul > li {
   color: var(--dark-blue);
   /* Misc */
   pointer-events: none;
+  cursor: pointer;
 }
 
 ul > li span {
