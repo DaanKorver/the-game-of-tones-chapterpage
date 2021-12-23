@@ -8,14 +8,11 @@
     },
     "chapters": [
       {
-        "index": "intro",
-        "title": "Introduction Chapter 1",
-        "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti facilis eum nobis possimus sint, odio ratione odit alias quos nostrum ipsam iusto explicabo beatae cupiditate dolorum. Consequatur commodi libero doloribus."
-      },
-      {
-        "index": "1",
-        "title": "1",
-        "body": "1",
+        "index": 1,
+        "intro": {
+          "title": "Introduction Chapter 1",
+          "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti facilis eum nobis possimus sint, odio ratione odit alias quos nostrum ipsam iusto explicabo beatae cupiditate dolorum. Consequatur commodi libero doloribus."    
+        },
         "lessons": [
           {
             "index": 1,
@@ -92,14 +89,166 @@
         ]
       },
       {
-        "index": "2",
-        "title": "2",
-        "body": "1"
+        "index": 2,
+        "intro": {
+          "title": "Introduction Chapter 2",
+          "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti facilis eum nobis possimus sint, odio ratione odit alias quos nostrum ipsam iusto explicabo beatae cupiditate dolorum. Consequatur commodi libero doloribus."    
+        },
+        "lessons": [
+          {
+            "index": 1,
+            "subjects": [
+              {            
+              "title": "Directions I",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Directional Tendencies I",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "subjects": [
+              {            
+              "title": "Directions II",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Temporal Tendencies I",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "subjects": [
+              {            
+              "title": "Directions III",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Directional Tendencies II",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "subjects": [
+              {            
+              "title": "Putting it together",
+              "body": "The Story so far..."
+              }
+            ]
+          }
+        ]
       },
       {
-        "index": "3",
-        "title": "3",
-        "body": "1"
+        "index": 3,
+        "intro": {
+          "title": "Introduction Chapter 3",
+          "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti facilis eum nobis possimus sint, odio ratione odit alias quos nostrum ipsam iusto explicabo beatae cupiditate dolorum. Consequatur commodi libero doloribus."    
+        },
+        "lessons": [
+          {
+            "index": 1,
+            "subjects": [
+              {            
+              "title": "Directions I",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Directional Tendencies I",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "subjects": [
+              {            
+              "title": "Directions II",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Temporal Tendencies I",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "subjects": [
+              {            
+              "title": "Directions III",
+              "body": "Lorem ipsum"
+              },
+              {            
+                "title": "Directional Tendencies II",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "In action",
+                "body": "Lorem ipsum"
+              },
+              {
+                "title": "Exercises & Activities",
+                "body": "Lorem ipsum"
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "subjects": [
+              {            
+              "title": "Putting it together",
+              "body": "The Story so far..."
+              }
+            ]
+          }
+        ]
       }
     ]
   }

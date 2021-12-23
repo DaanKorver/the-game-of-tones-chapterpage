@@ -167,6 +167,7 @@
 
         .cls-21 {
           clip-path: url(#clip-path);
+          pointer-events: none;
         }
 
         .cls-22 {
@@ -237,7 +238,7 @@
         <circle class="cls-4" cx="218.02" cy="166.82" r="24.9" />
       </g>
     </g>
-    <g id="circle_1_in_sphere" data-name="circle 1 in sphere">
+    <g id="circle_1_in_sphere" data-name="circle 1 in sphere" @click="navigateIntro">
       <g id="cirkel_intro" data-name="cirkel intro">
         <circle class="cls-4" cx="142.63" cy="142.32" r="24.9" />
       </g>
@@ -437,6 +438,11 @@ export default {
       const lesson = event.currentTarget.dataset.lesson
       const fullPath = this.$route.fullPath
       const newPath = fullPath.replace(/\/menu\/?/, `/chapter/${this.chapter}/lesson/${lesson}/subject/1`)
+      this.$router.push(newPath)
+    },
+    navigateIntro() {
+      const fullPath = this.$route.fullPath
+      const newPath = fullPath.replace(/\/menu\/?/, `/chapter/${this.chapter}/intro`)
       this.$router.push(newPath)
     }
   }

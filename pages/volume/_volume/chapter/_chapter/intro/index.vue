@@ -16,8 +16,9 @@ import pages from "~/static/pages.json"
 export default {
   asyncData ({ params }) {
     const volumeInfo = pages[params.volume - 1]
-    const chapterInfo = volumeInfo.chapters[0]
-    const {title, body, lessons} = chapterInfo
+    const chapterInfo = volumeInfo.chapters[params.chapter - 1].intro
+    console.log(chapterInfo);
+    const {title, body} = chapterInfo
     return {title, body}
   },
   computed: {
