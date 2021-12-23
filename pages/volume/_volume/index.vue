@@ -6,6 +6,7 @@
       <p>The Game of Tones</p>
     </section>
     <ul>
+      <li class="hue"><NuxtLink :to="`${$route.fullPath}/intro`"><span>Intro</span></NuxtLink></li>
       <li v-for="chapter in chapters" :key="chapter.index" :class="chapter.index == 'intro' ? 'hue' : 'locked' "><NuxtLink :to="`${$route.fullPath}/intro`"><span>{{ chapter.index }}</span></NuxtLink></li>
     </ul>
   </nav>
