@@ -9,7 +9,7 @@
         :active="lesson.index == active"
         :subject="subject"
       >
-        {{ lesson.index == 'intro' ? lesson.index : `1.${lesson.index}` }}
+        {{ lesson.index == 'intro' ? lesson.index : `${chapter}.${lesson.index}` }}
       </OnionItem>
     </ul>
   </nav>
@@ -17,10 +17,7 @@
 
 <script>
 export default {
-  props: ['lessons','active', 'subject'],
-  mounted: function() {
-    console.log(this.subject);
-  }
+  props: ['chapter', 'lessons','active', 'subject']
 };
 </script>
 

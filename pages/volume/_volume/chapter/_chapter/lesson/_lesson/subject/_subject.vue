@@ -7,7 +7,7 @@
         <h2>{{ title }}</h2>
         <p>{{ body }}</p>
       </main>
-      <OnionNav :lessons="lessons" :active="active" :subject="subject"/>
+      <OnionNav :chapter="chapter" :lessons="lessons" :active="active" :subject="subject"/>
     </div>
   </section>
 </template>
@@ -18,10 +18,11 @@ export default {
     const volumeInfo = pages[params.volume - 1]
     const chapterInfo = volumeInfo.chapters[params.chapter - 1]
     const subject = chapterInfo.lessons[params.lesson - 1].subjects[params.subject - 1]
+    const { index } = chapterInfo
     let {title, body} = subject
     const {lessons} = chapterInfo
     title = `${params.chapter}.${params.lesson}: ${title}` 
-    return {title, body, lessons, active: params.lesson, subject: params.subject}
+    return {title, body, lessons, active: params.lesson, subject: params.subject, chapter: index}
   },
   computed: {
     activeSubject: function() {
