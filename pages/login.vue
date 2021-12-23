@@ -3,15 +3,15 @@
     <GotLogo></GotLogo>
     <form>
       <legend>
-        <input type="text" required />
+        <input type="text" id="username" required />
         <span class="bar"></span>
-        <label>Username:</label>
+        <label for="username">Username:</label>
       </legend>
 
       <legend>
-        <input type="password" required />
+        <input type="password" id="password" required />
         <span class="bar"></span>
-        <label>Password:</label>
+        <label for="password">Password:</label>
       </legend>
       <p>Forgot password or username?</p>
       <NuxtLink to="volume/1" class="cta-purple">SIGN IN</NuxtLink>
